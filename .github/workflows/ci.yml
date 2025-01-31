@@ -14,7 +14,7 @@ jobs:
       postgres:
         image: postgres:17.2-alpine
         env:
-          POSTGRES_USER: root
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: secret
           POSTGRES_DB: simple_bank
         # start running next steps only after postgres is up
