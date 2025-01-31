@@ -6,6 +6,12 @@ import (
 	"fmt"
 )
 
+// type Store interface {
+// 	Querier
+// 	TransferTx(ctx context.Context, arg TransferTxParams) (TransferTxResult, error)
+// }
+
+// SQL store provides all functions to execute SQL queries and transactions
 type Store struct {
 	*Queries // composition
 	db *sql.DB
