@@ -1,5 +1,5 @@
 postgres:
-	docker run --name simple_bank_postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=secret -d postgres:17.2-alpine
+	docker run --name simple_bank_postgres --network bank-network -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=secret -d postgres:17.2-alpine
 
 postgres-down:
 	docker stop simple_bank_postgres && docker container rm simple_bank_postgres
