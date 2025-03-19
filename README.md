@@ -1,3 +1,5 @@
+## Clean up DOCS
+
 Create `main.go`
 
 Add `package main and func main()` inside.
