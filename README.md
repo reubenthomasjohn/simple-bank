@@ -1,3 +1,5 @@
+## Clean up DOCS
+
 Create `main.go`
 
 Add `package main and func main()` inside.
@@ -36,3 +38,11 @@ D. Durability
 
 BEGIN; ... COMMIT;
 BEGIN; ... ROLLBACK;
+
+## Creating a docker network
+
+1. docker network create bank-network
+
+2. docker network connect bank-network simple_bank_postgres
+
+3. docker run --name simplebank --network bank-network -p 8080:8080 -e GIN_MODE=release -e DB_SOURCE="postgresql://root:secret@simple_bank_postgres:5432?sslmode=disable" simplebank:latest
